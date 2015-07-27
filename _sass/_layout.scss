@@ -225,15 +225,29 @@
 /**
  * Page content
  */
+
+.hero {
+    min-height: 10em;
+    background: url('/images/spark-bg.png') no-repeat 100% 0px;
+    background-color: $grey-color-dark;
+}
+
+.hero .subheading {
+    font-size: 1.2em;
+    color: white;
+    border-radius: 5px;
+    padding: 1.2em;
+    background-color: rgba(40, 40, 40, 0.7);
+}
+
 .page-header {
     min-height: 5em;
     background: url('/images/spark-bg.png') no-repeat 100% 0px;
     background-color: $grey-color-dark;
-    margin-bottom: $spacing-unit;
 }
 
 .page-content {
-    padding: $spacing-unit 0;
+    padding: 1.8em 0 1.4em 0;
 }
 
 .page-heading {
@@ -243,7 +257,7 @@
 .page-title {
     font-size: 2em;
     letter-spacing: -1px;
-    color: $grey-color-light;
+    color: white;
     margin:0;
     
     @include media-query($on-laptop) {
@@ -317,4 +331,26 @@
             font-size: 18px;
         }
     }
+}
+
+.breadcrumb {
+    margin-top: 1em;
+}
+
+.breadcrumb .navbar .nav-item {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.breadcrumb .navbar .divider {
+    display: inline-block;
+    margin: 0 0.4em 0 0.235em;
+}
+
+
+.side-nav {
+    float: left;
+    margin-right: 1em;
+    padding: 1em;
+    background-color: $grey-color-light;
 }

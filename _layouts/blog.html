@@ -6,19 +6,16 @@ layout: default
   <header class="page-header">
     <div class="page-content">
       <div class="wrapper">
-        <h1 class="page-title">{{ page.title }}</h1>
+        <h1 class="page-title">Illumineto Developer Blog</h1>
       </div>
     </div>
   </header>
 
+  {% include breadcrumb.html %}
+
   <div class="page-content">
     <div class="wrapper">
-      <article class="page-content">
-        {{ content }}
-      </article>
-
-      <h2 class="page-heading">Posts</h2>
-
+      <h2 class="page-heading">Latest Posts</h2>
       <ul class="post-list">
         {% for post in site.posts %}
           <li>
@@ -30,9 +27,7 @@ layout: default
           </li>
         {% endfor %}
       </ul>
-
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
     </div>
   </div>
 

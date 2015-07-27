@@ -4,10 +4,14 @@ layout: default
 
 <div class="home">
 
-  <header class="page-header">
+  <header class="home-header hero">
     <div class="page-content">
       <div class="wrapper">
-        <h1 class="page-title">Developers Center</h1>
+        <h1 class="page-title">Illumineto Developer Center</h1>
+        <div class="subheading">
+          Welcome to the Illumineto developer center. Here you will
+          find the information you need to create rich interactions
+          with the Illumineto platform.
       </div>
     </div>
   </header>
@@ -15,6 +19,7 @@ layout: default
   <div class="page-content">
     <div class="wrapper">
       <article class="page-content">
+
         <ul class="post-list">
           {% for post in site.posts %}
             <li>
@@ -26,7 +31,6 @@ layout: default
             </li>
           {% endfor %}
         </ul>
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
       </article>
     </div>
   </div>
