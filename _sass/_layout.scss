@@ -3,7 +3,7 @@
  */
 .site-header {
     background-color: $grey-color-very-light;
-    min-height: 56px;
+    // min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -15,8 +15,8 @@
     padding: 1em;
     background-color: $grey-color-light;
     border-radius: 0 0 5px 5px;
-    height: 80px;
-    line-height: 80px;
+    // height: 80px;
+    line-height: 2.33em;
     margin-bottom: -30px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .main-nav {
-    display: inline-block;
+    // display: inline-block;
     margin-left: 1em;
 }
 
@@ -43,9 +43,20 @@
     }
 }
 
-.main-nav a.site-title, .site-title {
-    font-size:1em;
+a.site-title, .site-title {
     font-weight: bold;
+    color: $text-primary-color;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-left: 0.5em;
+
+    &,
+    &:visited,
+    &:hover {
+        color: $text-primary-color;
+        text-decoration: none;
+    }
+
 }
 
 .user-nav {
@@ -78,6 +89,11 @@
 
 .site-nav {
     display: inline-block;
+    margin: 0.4em 0 0.1em 0;
+
+    li {
+        display: inline-block;
+    }
 
     a {
         color: $text-primary-color;
@@ -228,7 +244,7 @@
 
 .hero {
     min-height: 10em;
-    background: url('/images/spark-bg.png') no-repeat 100% 0px;
+    background: url('/images/spark-bg.png') no-repeat 100% 0;
     background-color: $grey-color-dark;
 }
 

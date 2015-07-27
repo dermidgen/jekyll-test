@@ -7,9 +7,19 @@
     </div>
     <nav class="main-nav">
 
+      <div>
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <nav class="user-nav">
+          <a href="http://www.illumineto.com">Illumineto</a>
+          <a href="#">Spark</a>
+          <a href="#" class="active">Developers</a>
+          <a href="#">Login</a>
+        </nav>
+      </div>
+
       <div class="site-nav">
 
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
         <div class="trigger">
           <ul class="navbar">
             {% for page in site.pages %}
@@ -33,12 +43,6 @@
 
     </nav>
 
-    <nav class="user-nav">
-      <a href="http://www.illumineto.com">Illumineto</a>
-      <a href="#">Spark</a>
-      <a href="#" class="active">Developers</a>
-      <a href="#">Login</a>
-    </nav>
 
   </div>
 
