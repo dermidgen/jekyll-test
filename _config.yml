@@ -1,0 +1,12 @@
+# Site settings
+title: Developers Center
+email: developers@illumineto.com
+description: > # this means to ignore newlines until "baseurl:"
+  &copy; 2015 Illumineto, LLC. | <a href="www.illumineto.com" target="_blank">Policies</a> | <a href="www.illumineto.com" target="_blank">Compliance</a>
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://developers.illumineto.com" # the base hostname & protocol for your site
+twitter_username: illumineto
+github_username:  illumineto
+
+# Build settings
+markdown: kramdown
