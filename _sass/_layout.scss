@@ -241,6 +241,26 @@ a.site-title, .site-title {
 /**
  * Page content
  */
+.blocks {
+    text-align: center;
+}
+
+.blocks .block {
+    min-width: 25%;
+    margin: 0 0.8em;
+    background-color: $grey-color-light;
+    display: inline-block;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.blocks .block:last-child {
+    margin-right:0;
+}
+
+.blocks .block:first-child {
+    margin-left:0;
+}
 
 .hero {
     min-height: 10em;

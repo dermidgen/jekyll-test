@@ -18,16 +18,29 @@ layout: default
 
   <div class="page-content">
     <div class="wrapper">
-      <article class="page-content">
 
+      <div class="blocks">
+        <div class="block">
+          <h2 class="title">Getting Started</h2>
+        </div>
+        <div class="block">
+          <h2 class="title">Browse Content</h2>
+        </div>
+        <div class="block">
+          <h2 class="title">Help &amp; Resources</h2>
+        </div>
+      </div>
+
+      <article class="page-content">
+        <h3>Latest Developer Blogs</h3>
         <ul class="post-list">
           {% for post in site.posts %}
             <li>
               <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-              <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </h2>
+              <h4>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h4>
             </li>
           {% endfor %}
         </ul>
