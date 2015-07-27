@@ -20,11 +20,10 @@
       <div class="site-nav">
         <div class="trigger">
           <ul class="navbar">
-            {% for page in site.pages %}
-              {% if page.title %}
-              <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-              {% endif %}
-            {% endfor %}
+            <li><a href="/documentation/getting-started/">Getting Started</a></li>
+            <li><a href="/documentation/">Documentation</a></li>
+            <li><a href="/documentation/api-reference/">API Reference</a></li>
+            <li><a href="/blog/">Blog</a></li>
           </ul>
         </div>
 
