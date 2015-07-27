@@ -242,27 +242,40 @@ a.site-title, .site-title {
 }
 
 .blocks .block {
-    min-width: 25%;
-    margin: 0.2em 0.6em;
+    min-width: 26%;
+    margin: 0.2em 0.7em;
     background-color: $grey-color-light;
     display: inline-block;
     padding: 1em;
     border-radius: 5px;
     
+    @include media-query($on-laptop) {
+        margin: 0.2em 0.5em;
+        min-width: 24%;
+    }
+
+    @include media-query($on-palm) {
+        display: block;
+        margin: 0.4em 0;
+    }
+
     img {
         @include media-query($on-laptop) {
             width: 50%;
         }
+        @include media-query($on-palm) {
+            width: 25%;
+        }
     }
 }
 
-// .blocks .block:last-child {
-//     margin-right:0;
-// }
+.blocks .block:first-child {
+    margin-left:0;
+}
 
-// .blocks .block:first-child {
-//     margin-left:0;
-// }
+.blocks .block:last-child {
+    margin-right:0;
+}
 
 .breadcrumb {
     margin-top: 1em;
