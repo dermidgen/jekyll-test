@@ -3,9 +3,6 @@
  */
 .site-header {
     background-color: $grey-color-light;
-    // min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
     position: relative;
 }
 
@@ -15,32 +12,28 @@
     padding: 1em;
     background-color: $grey-color-light;
     border-radius: 0 0 5px 5px;
-    // height: 80px;
     line-height: 2.33em;
     margin-bottom: -30px;
-}
-
-.site-logo img {
-    vertical-align: bottom;
     
+    img {
+        vertical-align: bottom;
+    }
 }
 
 .main-nav {
-    // display: inline-block;
     margin-left: 1em;
-}
-
-.main-nav a {
-    color: $grey-color-dark;
-    font-size: 0.8em;
-    margin-left: 0.7em;
-    text-shadow: 1px 1px 0 white;
-
-    &,
-    &:visited,
-    &:hover {
+    a {
         color: $grey-color-dark;
-        text-decoration: none;
+        font-size: 0.8em;
+        margin-left: 0.7em;
+        text-shadow: 1px 1px 0 white;
+
+        &,
+        &:visited,
+        &:hover {
+            color: $grey-color-dark;
+            text-decoration: none;
+        }
     }
 }
 
@@ -64,24 +57,23 @@ a.site-title, .site-title {
 
 .user-nav {
     float: right;
-}
-
-.user-nav a {
-    color: $grey-color-dark;
-    font-size: 0.8em;
-    margin-left: 0.7em;
-
-    &,
-    &:visited,
-    &:hover {
+    a {
         color: $grey-color-dark;
-        text-decoration: none;
-    }
-}
+        font-size: 0.8em;
+        margin-left: 0.7em;
 
-.user-nav a.active {
-    font-weight: bold;
-    text-decoration: underline;
+        &,
+        &:visited,
+        &:hover {
+            color: $grey-color-dark;
+            text-decoration: none;
+        }
+    }
+    
+    a.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
 }
 
 .navbar {
@@ -172,14 +164,14 @@ a.site-title, .site-title {
     }
 }
 
-
-
 /**
  * Site footer
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: $grey-color-dark;
+    color: $grey-color-very-light;
 }
 
 .footer-heading {
@@ -195,7 +187,7 @@ a.site-title, .site-title {
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $grey-color-very-light;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -242,8 +234,6 @@ a.site-title, .site-title {
     }
 }
 
-
-
 /**
  * Page content
  */
@@ -266,6 +256,44 @@ a.site-title, .site-title {
 
 .blocks .block:first-child {
     margin-left:0;
+}
+
+.breadcrumb {
+    margin-top: 1em;
+}
+
+.breadcrumb .navbar .nav-item {
+    display: inline-block;
+    text-transform: capitalize;
+
+    a, a:visited {
+        color: $text-primary-color;
+    }
+}
+
+.breadcrumb .navbar .divider {
+    display: inline-block;
+    margin: 0 0.4em 0 0.235em;
+}
+
+.side-nav {
+    float: left;
+    margin-right: 1em;
+    padding: 1em;
+    background-color: $grey-color-light;
+    line-height: 1.7em;
+
+    a, a:visited, a:hover {
+        color: $grey-color-dark;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    ul {
+        font-size: 0.9em;
+    }
 }
 
 .hero {
@@ -326,8 +354,6 @@ a.site-title, .site-title {
     font-size: 24px;
 }
 
-
-
 /**
  * Posts
  */
@@ -373,30 +399,4 @@ a.site-title, .site-title {
             font-size: 18px;
         }
     }
-}
-
-.breadcrumb {
-    margin-top: 1em;
-}
-
-.breadcrumb .navbar .nav-item {
-    display: inline-block;
-    text-transform: capitalize;
-
-    a, a:visited {
-        color: $text-primary-color;
-    }
-}
-
-.breadcrumb .navbar .divider {
-    display: inline-block;
-    margin: 0 0.4em 0 0.235em;
-}
-
-
-.side-nav {
-    float: left;
-    margin-right: 1em;
-    padding: 1em;
-    background-color: $grey-color-light;
 }

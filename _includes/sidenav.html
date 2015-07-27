@@ -1,0 +1,26 @@
+{% assign target_page = 'documentation' %}
+{% assign pages_list = site.pages %}
+
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/documentation/">Documentation</a>
+      <ul class="nav">
+        {% for page in pages_list %}
+
+          {% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+          {% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
+
+          {% if splitted_url_parts[1] == target_page %}
+            {% if splitted_url_parts[2] %}
+              <li class="nav-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endif %}
+
+
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
