@@ -243,20 +243,26 @@ a.site-title, .site-title {
 
 .blocks .block {
     min-width: 25%;
-    margin: 0 0.8em;
+    margin: 0.2em 0.6em;
     background-color: $grey-color-light;
     display: inline-block;
     padding: 1em;
     border-radius: 5px;
+    
+    img {
+        @include media-query($on-laptop) {
+            width: 50%;
+        }
+    }
 }
 
-.blocks .block:last-child {
-    margin-right:0;
-}
+// .blocks .block:last-child {
+//     margin-right:0;
+// }
 
-.blocks .block:first-child {
-    margin-left:0;
-}
+// .blocks .block:first-child {
+//     margin-left:0;
+// }
 
 .breadcrumb {
     margin-top: 1em;
@@ -331,7 +337,7 @@ a.site-title, .site-title {
     margin:0;
     
     @include media-query($on-laptop) {
-        font-size: 1em;
+        font-size: 1.6em;
     }
 }
 
