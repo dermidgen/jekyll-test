@@ -18,23 +18,17 @@
     img {
         vertical-align: bottom;
     }
+
+    @include media-query($on-palm) {
+        margin-bottom:0;
+        padding-bottom:0.2em;
+        line-height:inherit;
+        float:none;
+    }    
 }
 
 .main-nav {
     margin-left: 1em;
-    a {
-        color: $grey-color-dark;
-        font-size: 0.8em;
-        margin-left: 0.7em;
-        text-shadow: 1px 1px 0 white;
-
-        &,
-        &:visited,
-        &:hover {
-            color: $grey-color-dark;
-            text-decoration: none;
-        }
-    }
 }
 
 a.site-title, .site-title {
@@ -42,7 +36,6 @@ a.site-title, .site-title {
     color: $text-primary-color;
     font-size: 1.2em;
     display: inline-block;
-    margin-left: 0.5em;
 
     &,
     &:visited {
@@ -52,6 +45,11 @@ a.site-title, .site-title {
 
     &:hover {
         color: $text-primary-color-dark;
+    }
+
+    @include media-query($on-palm) {
+        display:block;
+        font-size:1.134em;
     }
 }
 
@@ -88,6 +86,7 @@ a.site-title, .site-title {
 
     li {
         display: inline-block;
+        margin-right: 0.5em;
     }
 
     a {
@@ -101,7 +100,7 @@ a.site-title, .site-title {
         }
         &:hover {
             color: $text-primary-color-dark;
-            text-decoration: none;
+            text-decoration: underline;
         }
     }
 
@@ -161,6 +160,30 @@ a.site-title, .site-title {
             display: block;
             padding: 5px 10px;
         }
+    }
+}
+
+.side-nav {
+    float: left;
+    margin-right: 1em;
+    padding: 1em;
+    background-color: $grey-color-light;
+    line-height: 1.7em;
+
+    a, a:visited, a:hover {
+        color: $grey-color-dark;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    ul {
+        font-size: 0.9em;
+    }
+
+    @include media-query($on-palm) {
+        float: none;
     }
 }
 
@@ -293,26 +316,6 @@ a.site-title, .site-title {
 .breadcrumb .navbar .divider {
     display: inline-block;
     margin: 0 0.4em 0 0.235em;
-}
-
-.side-nav {
-    float: left;
-    margin-right: 1em;
-    padding: 1em;
-    background-color: $grey-color-light;
-    line-height: 1.7em;
-
-    a, a:visited, a:hover {
-        color: $grey-color-dark;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    ul {
-        font-size: 0.9em;
-    }
 }
 
 .hero {
